@@ -1,1 +1,12 @@
 TODO: Task 1 - Write the mongo import command here
+
+mongosh "mongodb://mongo:KBkjNDYy5PtSbAL5v1FH@containers-us-west-144.railway.app:5737"
+use restaurant
+
+[exit]
+
+mongoimport --uri "mongodb://mongo:KBkjNDYy5PtSbAL5v1FH@containers-us-west-144.railway.app:5737/" 
+--db restaurants 
+--collection restaurants 
+--file /Users/kok/vttp/csf-assessment-template/restaurants.json
+--jsonArray
