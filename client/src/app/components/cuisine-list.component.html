@@ -1,1 +1,10 @@
-<p>cuisine-list works!</p>
+ <form>
+  <table>
+    <thead>List of Cuisines</thead>
+    <tbody *ngFor="let c of cuisineList">
+      <tr>
+        <td (click)="onSelect(c)">{{ c }}</td>
+      </tr>
+    </tbody>
+  </table>
+</form>

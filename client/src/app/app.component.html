@@ -1,3 +1,22 @@
 <!-- You may modify this HTML -->
+<table>
+  <tr>
+    <td>
+      <app-cuisine-list 
+        (selectedRestaurantsByCuisine)="selectedRestaurantByCuisine($event)"
+        (selectedCuisine)="selectedCuisine($event)">
+      </app-cuisine-list>
+    </td>
+    <td>
+      <app-restaurant-cuisine 
+        [selectedRestaurantsByCuisine]="onSelectedRestaurantsByCuisine"
+        [selectedCuisine]="onSelectedCuisine"
+        (selectedRestaurant)="selectedRestaurant($event)">
+      </app-restaurant-cuisine>
+    </td>
+    <td>
 
-<app-cuisine-list></app-cuisine-list>
+    </td>
+  </tr>
+</table>
+

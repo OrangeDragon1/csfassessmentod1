@@ -1,1 +1,11 @@
-<p>restaurant-cuisine works!</p>
+<table>
+  <thead>
+    <div *ngIf="selectedCuisine.length <= 0"> {{ "Nothing selected" }}</div>
+    <div *ngIf="selectedCuisine.length > 0"> {{ selectedCuisine }}</div>
+  </thead>
+  <tbody *ngFor="let sr of selectedRestaurantsByCuisine">
+    <tr>
+      <td (click)="onSelect(sr)">{{ sr }}</td>
+    </tr>
+  </tbody>
+</table>
